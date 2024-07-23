@@ -14,7 +14,7 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 RUN poetry lock --no-update
 RUN poetry install --no-root -E \
-    "postgres server dev autogen local milvus server qdrant ollama" && \
+    "postgres server autogen local ollama" && \
     rm -rf $POETRY_CACHE_DIR 
 
 
